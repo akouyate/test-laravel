@@ -20,7 +20,6 @@ class Job extends Model
     use HasFactory;
     use HasUuids;
 
-
     protected $keyType = 'string';
     public $incrementing = false;
 
@@ -42,7 +41,6 @@ class Job extends Model
           return Task::createFromArray(json_decode($value, true));
         }
     }
-
 
     public function getKeyName(): string
     {

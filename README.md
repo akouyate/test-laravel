@@ -15,8 +15,8 @@ Before you begin, make sure you have Docker installed on your system. If you don
    First, clone the repository to your local machine:
 
    ```bash
-   git clone [your-repo-url]
-   cd [your-repo-name]
+   git clone git@github.com:akouyate/test-laravel.git
+   cd test-laravel
    ```
 
 2. **Start Docker Containers**
@@ -36,9 +36,16 @@ Before you begin, make sure you have Docker installed on your system. If you don
    ```bash
    docker-compose exec laravel.test composer install
    ```
+   
+4. **Environment Configuration**
 
+   Copy the example environment file to create your own environment configuration:
 
-4. **Run Migrations**
+   ```bash
+   docker-compose exec laravel.test cp .env.example .env
+   ```
+
+5. **Run Migrations**
 
    To set up your database schema, run the migrations:
 
